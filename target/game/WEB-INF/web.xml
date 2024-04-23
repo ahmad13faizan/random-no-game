@@ -6,14 +6,14 @@
          version="4.0">
 
     <servlet>
-        <servlet-name>RandomNumberServlet</servlet-name>
-        <servlet-class>RandomNumberServlet</servlet-class>
+        <servlet-name>NumberGuessServlet</servlet-name>
+        <servlet-class>NumberGuessServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
 
-        <servlet-name>RandomNumberServlet</servlet-name>
-        <url-pattern>/randomNumber</url-pattern>
+        <servlet-name>NumberGuessServlet</servlet-name>
+        <url-pattern>/NumberGuessServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

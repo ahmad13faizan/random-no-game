@@ -39,7 +39,7 @@ public class NumberGuessServlet extends HttpServlet {
         out.println("<div class=\"container\">");
         out.println("<h1>Welcome to the Number Guessing Game!</h1>");
         out.println("<form action=\"NumberGuessServlet\" method=\"POST\">");
-        out.println("Your Guess: <input type=\"text\" name=\"guess\"><br>");
+        out.println("Your Guess(1 -100) : <input type=\"text\" name=\"guess\"><br>");
         out.println("<input type=\"submit\" value=\"Submit Guess\">");
         out.println("</form>");
         out.println("</div>");
@@ -52,6 +52,7 @@ public class NumberGuessServlet extends HttpServlet {
             session.setAttribute("attempts", attempts);
             
             if (userGuess == numberToGuess) {
+                
                 out.println("<div class=\"container\">");
                 out.println("<p>Congratulations! You guessed the correct number!</p>");
                 out.println("<p>Number of attempts: " + attempts + "</p>");

@@ -18,8 +18,8 @@ Welcome to the Number Guessing Game! This is a web application where players can
 
 ## Screenshots
 
-![Screenshot 1](Screenshot1.png)
-![Screenshot 2](Screenshot1.png)
+![Screenshot 1](Screenshot 1.png)
+![Screenshot 2](Screenshot 2.png)
 
 
 ## Getting Started

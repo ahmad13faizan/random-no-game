@@ -16,6 +16,12 @@ Welcome to the Number Guessing Game! This is a web application where players can
 - **CSS**: Stylesheets for styling the user interface.
 - **Apache Maven**: Project management tool for building and managing dependencies.
 
+## Screenshots
+
+![Screenshot 1](Screenshot1.png)
+![Screenshot 2](Screenshot1.png)
+
+
 ## Getting Started
 
 To run the Number Guessing Game locally, follow these steps:

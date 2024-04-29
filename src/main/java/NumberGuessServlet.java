@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 public class NumberGuessServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    public int score=0;
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
@@ -55,7 +56,7 @@ public class NumberGuessServlet extends HttpServlet {
                 
                 out.println("<div class=\"container\">");
                 out.println("<p>Congratulations! You guessed the correct number!</p>");
-                out.println("<p>Number of attempts: " + attempts + "</p>");
+                out.println("<p>Number of attempts: " + attempts +"<br><br>"+"Your score: "+ ++score+ "</p>");
                 out.println("<form action=\"NumberGuessServlet\" method=\"POST\">");
                 out.println("<input type=\"submit\" value=\"Play Again\">");
                 out.println("</form>");
@@ -68,6 +69,7 @@ public class NumberGuessServlet extends HttpServlet {
                 out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
                 out.println("</head><body>");
                 out.println("<div class=\"container\">");
+                out.println("<vr>Your score "+score);
                 out.println("<p style=\"color: red; font-size: 24px; text-align: center;\">Sorry, you have reached the maximum number of attempts. The correct number was " + numberToGuess + ".</p>");
                 out.println("<marquee><h2 style=\"font-size: 36px; color: blue; text-align: center;\">Game Over</h2></marquee>");
                 out.println("<form action=\"NumberGuessServlet\" method=\"POST\">");
@@ -76,7 +78,7 @@ public class NumberGuessServlet extends HttpServlet {
                 out.println("</div>");
                 out.println("</body></html>");
                 
-
+                score=0;
                 session.removeAttribute("numberToGuess");
                 session.removeAttribute("attempts");
             } else if (userGuess < numberToGuess) {
